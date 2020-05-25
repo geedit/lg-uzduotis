@@ -82,6 +82,7 @@ class Predict_model():
         print(f'Test data range from {self.starting_date} to {self.end_date}')
         print(f'Testing using {self.split_size*100} % of total dataset')
         print(f'Mean absolute error - {mean_absolute_error(self.y_test, model_results)}')
+        print(f'Average real price during this period - {np.mean(self.y_test)}')
         print('#####')
         
     def future_predict(self):
