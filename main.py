@@ -43,7 +43,7 @@ class Predict_model():
     def __init__(self):
         self.model = xgb.XGBRegressor(n_estimators=1000, seed=1234, booster = 'gblinear')
         
-    def train_predict_one(self, file):
+    def train_test_one(self, file):
         
        # if file == 'data\Total-All.xlsx':
        #     self.columns = ['Augalines kilmes produktai', 'Kietasis mineralinis kuras',
@@ -130,6 +130,6 @@ if __name__ == "__main__":
  #   file = 'data\\Total-Nafta ir naftos produktai.xlsx'
     
     model = Predict_model()
-    model.train_predict_one(file)
+    model.train_test_one(file)
     model.future_predict()
  #   model.save_future_prediction()
